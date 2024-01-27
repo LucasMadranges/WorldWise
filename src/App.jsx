@@ -9,6 +9,7 @@ import Login from "./pages/Login.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
 import CityList from "./components/CityList.jsx";
 import CountryList from "./components/CountryList.jsx";
+import City from "./components/City.jsx";
 
 export default function App() {
     const [cities, setCities] = useState([])
@@ -53,6 +54,10 @@ export default function App() {
                                    element={
                                        <CityList cities={cities}
                                                  isLoading={isLoading}/>
+                                   }/>
+                            <Route path='cities/:id'
+                                   element={
+                                       <City/>
                                    }/>
                             <Route path='countries'
                                    element={
