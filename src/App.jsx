@@ -1,5 +1,6 @@
-import {useEffect, useState} from "react";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+
+import {CitiesProvider} from "./contexts/CitiesContext.jsx";
 
 import Product from "./pages/Product.jsx";
 import Homepage from "./pages/Homepage.jsx";
@@ -13,29 +14,9 @@ import City from "./components/City/City.jsx";
 import Form from "./components/Form/Form.jsx";
 
 export default function App() {
-    const [cities, setCities] = useState([])
-    const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(() => {
-        async function fetchCities() {
-            try {
-                setIsLoading(true);
-                const resp = await fetch(`http://localhost:8000/cities`);
-                const data = await resp.json();
-                setCities(data)
-            } catch (error) {
-                throw new Error(error)
-            } finally {
-                setIsLoading(false)
-            }
-        }
-
-        fetchCities();
-    }, []);
-
     return (
         <>
-            <div>
+            <CitiesProvider>
                 <BrowserRouter>
                     <Routes>
                         <Route index
@@ -53,8 +34,7 @@ export default function App() {
                                                       to="cities"/>}/>
                             <Route path='cities'
                                    element={
-                                       <CityList cities={cities}
-                                                 isLoading={isLoading}/>
+                                       <CityList/>
                                    }/>
                             <Route path='cities/:id'
                                    element={
@@ -62,8 +42,7 @@ export default function App() {
                                    }/>
                             <Route path='countries'
                                    element={
-                                       <CountryList cities={cities}
-                                                    isLoading={isLoading}/>
+                                       <CountryList/>
                                    }/>
                             <Route path='form'
                                    element={
@@ -74,7 +53,7 @@ export default function App() {
                                element={<PageNotFound/>}/>
                     </Routes>
                 </BrowserRouter>
-            </div>
+            </CitiesProvider>
         </>
     )
 }
