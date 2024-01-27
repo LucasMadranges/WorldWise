@@ -1,6 +1,6 @@
 import styles from './CountryList.module.css'
-import Spinner from "./Spinner.jsx";
-import Message from "./Message.jsx";
+import Spinner from "../Spinner/Spinner.jsx";
+import Message from "../Message/Message.jsx";
 import CountryItem from "./CountryItem.jsx";
 
 export default function CountryList({cities, isLoading}) {
