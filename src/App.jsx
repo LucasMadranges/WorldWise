@@ -5,8 +5,30 @@ import PageNotFound from "./pages/PageNotFound.jsx";
 import Pricing from "./pages/Pricing.jsx";
 import Login from "./pages/Login.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
+import CityList from "./components/CityList.jsx";
+import {useEffect, useState} from "react";
 
 export default function App() {
+    const [cities, setCities] = useState([])
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        async function fetchCities() {
+            try {
+                setIsLoading(true);
+                const resp = await fetch(`http://localhost:8000/cities`);
+                const data = await resp.json();
+                setCities(data)
+            } catch (error) {
+                throw new Error(error)
+            } finally {
+                setIsLoading(false)
+            }
+        }
+
+        fetchCities();
+    }, []);
+
     return (
         <>
             <div>
@@ -23,10 +45,12 @@ export default function App() {
                         <Route path="app"
                                element={<AppLayout/>}>
                             <Route index
-                                   element={<p>List of cities</p>}/>
+                                   element={<CityList cities={cities}
+                                                      isLoading={isLoading}/>}/>
                             <Route path='cities'
                                    element={
-                                       <p>List of cities</p>
+                                       <CityList cities={cities}
+                                                 isLoading={isLoading}/>
                                    }/>
                             <Route path='countries'
                                    element={
