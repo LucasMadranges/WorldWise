@@ -10,6 +10,7 @@ import AppLayout from "./pages/AppLayout.jsx";
 import CityList from "./components/CityList.jsx";
 import CountryList from "./components/CountryList.jsx";
 import City from "./components/City.jsx";
+import Form from "./components/Form.jsx";
 
 export default function App() {
     const [cities, setCities] = useState([])
@@ -66,7 +67,7 @@ export default function App() {
                                    }/>
                             <Route path='form'
                                    element={
-                                       <p>Form</p>
+                                       <Form/>
                                    }/>
                         </Route>
                         <Route path="*"
