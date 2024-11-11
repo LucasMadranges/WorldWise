@@ -37,30 +37,6 @@
       "id": "98443197"
     },
     {
-      "id": "6488",
-      "cityName": "Herrera de los Navarros",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-11-11T20:29:49.959Z",
-      "notes": "HEllo",
-      "position": {
-        "lat": "41.22824901518532",
-        "lng": "-1.0986328125000002"
-      }
-    },
-    {
-      "id": "f2c3",
-      "cityName": "Jaca",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-11-11T20:29:49.959Z",
-      "notes": "HEllo",
-      "position": {
-        "lat": "42.8115217450979",
-        "lng": "-0.5053710937500001"
-      }
-    },
-    {
       "id": "fcd7",
       "cityName": "Lopik",
       "country": "Netherlands (Kingdom of the)",
@@ -121,30 +97,6 @@
       }
     },
     {
-      "id": "53b2",
-      "cityName": "Celanova",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-11-11T20:37:03.278Z",
-      "notes": "test",
-      "position": {
-        "lat": "42.172949840078665",
-        "lng": "-7.923968497997728"
-      }
-    },
-    {
-      "id": "24bf",
-      "cityName": "Ludell",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2024-11-11T20:37:11.598Z",
-      "notes": "test",
-      "position": {
-        "lat": "39.90973623453719",
-        "lng": "-100.89843750000001"
-      }
-    },
-    {
       "id": "3531",
       "cityName": "Djanet",
       "country": "Algeria",
@@ -154,18 +106,6 @@
       "position": {
         "lat": "23.926013033021192",
         "lng": "9.580078125"
-      }
-    },
-    {
-      "id": "54c5",
-      "cityName": "Edenderry",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
-      "date": "2024-11-11T20:38:55.764Z",
-      "notes": "test",
-      "position": {
-        "lat": "53.38332836757156",
-        "lng": "-7.294921875000001"
       }
     }
   ]
