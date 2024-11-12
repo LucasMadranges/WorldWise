@@ -37,18 +37,6 @@
       "id": "98443197"
     },
     {
-      "id": "fcd7",
-      "cityName": "Lopik",
-      "country": "Netherlands (Kingdom of the)",
-      "emoji": "🇳🇱",
-      "date": "2024-11-11T20:30:25.566Z",
-      "notes": "Hello",
-      "position": {
-        "lat": "51.957807388715544",
-        "lng": "4.921875000000001"
-      }
-    },
-    {
       "id": "5b75",
       "cityName": "Paris",
       "country": "France",
@@ -97,15 +85,15 @@
       }
     },
     {
-      "id": "3531",
-      "cityName": "Djanet",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2024-11-11T20:38:02.531Z",
+      "id": "d367",
+      "cityName": "Loudeac",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-11-12T17:59:35.954Z",
       "notes": "test",
       "position": {
-        "lat": "23.926013033021192",
-        "lng": "9.580078125"
+        "lat": "48.180738507303836",
+        "lng": "-2.7246093750000004"
       }
     }
   ]
