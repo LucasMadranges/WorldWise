@@ -13,6 +13,7 @@ import CountryList from "./components/Country/CountryList.jsx";
 import City from "./components/City/City.jsx";
 import Form from "./components/Form/Form.jsx";
 import {AuthProvider} from "./contexts/FakeAuthContext.jsx";
+import {ProtectedRoute} from "./pages/ProtectedRoute.jsx";
 
 export default function App() {
     return (
@@ -30,7 +31,7 @@ export default function App() {
                             <Route path="login"
                                    element={<Login/>}/>
                             <Route path="app"
-                                   element={<AppLayout/>}>
+                                   element={<ProtectedRoute><AppLayout/></ProtectedRoute>}>
                                 <Route index
                                        element={<Navigate replace
                                                           to="cities"/>}/>
